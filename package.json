@@ -1,0 +1,22 @@
+{
+  "name": "tractor-tutorial-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://shonhartman@github.com/shonhartman/Tractor_Tutorial.git"
+  },
+  "author": "shonhartman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shonhartman/Tractor_Tutorial/issues"
+  },
+  "homepage": "https://github.com/shonhartman/Tractor_Tutorial#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
