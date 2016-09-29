@@ -4,19 +4,39 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://shonhartman@github.com/shonhartman/Tractor_Tutorial.git"
   },
-  "author": "shonhartman",
+  "author": "Shaun Hartman",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shonhartman/Tractor_Tutorial/issues"
   },
   "homepage": "https://github.com/shonhartman/Tractor_Tutorial#readme",
+  "dependencies": {
+    "angularfire": "^2.0.2",
+    "firebase": "^3.4.1",
+    "partialify": "^3.1.6"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "babel-cli": "^6.14.0",
+    "browser-sync": "^2.16.0",
+    "browserify": "^13.1.0",
+    "eslint": "^3.6.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "minifyify": "^7.3.3",
+    "rimraf": "^2.5.4",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   }
 }
