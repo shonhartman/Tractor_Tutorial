@@ -83,20 +83,35 @@ function handleErrors() {
     this.emit('end'); //keep gulp from hanging on this task
 }
 
+//watch app folder for changes
 function buildScript(file, watch) {
     var props = {
-        
+        entries: ['./app/' + file],
+        debug: true,
+        transform: [babelify]   
+    };
+
+    //watchify() if watch requested, otherwise run browserify() once
+    var bundler = watch ? watchify(browserify(props)) : browserify(props);
+
+    function rebundle() {
+        var stream = bundler.bundle();
+        return stream
+                .on('error', handleErrors)
+                .pipe(source(file))
+                .pipe(gulp.dest('./dist/js'))
+                .pipe(browserSync.reload({
+                    stream: true
+                }));
     }
+
+    //listen for an update and run rebundle
+    bundler.on('update', function () {
+        rebundle();
+    });
+
+    //run it once the first time buildScript is called
+    return rebundle();
+
 }
 
-
-
-
-//test functions
-gulp.task("hello", function() {
-    console.log("Hello!");
-});
-
-gulp.task("default", ["hello"], function() {
-    console.log("This is the default task!");
-})
