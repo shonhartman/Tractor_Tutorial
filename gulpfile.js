@@ -1,16 +1,17 @@
 'use strict';
 
+var babelify = require('babelify');
+var browserify = require('browserify');
+var browserSync = require('browser-sync');
+var del = require('del');
 var gulp = require('gulp');
+var historyApiFallback = require('connect-history-api-fallback');
 var plugins = require('gulp-load-plugins')();
 var rimraf = require('rimraf');
-
-var browserify = require('browserify');
-var watchify = require('watchify');
-var babelify = require('babelify');
 var source = require('vinyl-source-stream');
+var watchify = require('watchify');
 
-var browserSync = require('browser-sync');
-var historyApiFallback = require('connect-history-api-fallback');
+
 
 //create local server
 gulp.task('browser-sync', function() {
@@ -34,10 +35,15 @@ gulp.task('sass', function () {
         }));
 });
 
-//push index changes to dist
+//clean folders before build
+gulp.task('clean', function() {
+    del('/dist');
+});
+
+//push index.html changes to dist folder
 gulp.task('index', function() {
     return gulp.src('./app/index.html')
-            .pipe(gulp.dest('/dist'))
+            .pipe(gulp.dest('./dist'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -48,6 +54,7 @@ gulp.task('assets', function() {
     return gulp.src('./app/assets/**/*')
         .pipe(gulp.dest('./dist/assets'));
 });
+
 
 //chain these tasks together
 gulp.task('build', ['clean', 'browserify', 'sass', 'index', 'assets']);
