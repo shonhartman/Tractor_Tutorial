@@ -1,9 +1,8 @@
-h1 {
-  color: lawngreen; }
+#color-test {
+  color: indigo; }
 
 /*# sourceMappingURL=main.css.map */
 /*
-Errno::ENOENT: No such file or directory - input.sass
 
 Backtrace:
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `read'
@@ -21,7 +20,3 @@ Backtrace:
 /usr/local/bin/sass:23:in `load'
 /usr/local/bin/sass:23:in `<main>'
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - input.sass"; }
