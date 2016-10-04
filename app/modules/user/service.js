@@ -5,6 +5,6 @@ class UserService {
     }
 }
 
-console.log("this is service JS");
+console.log("this is service JS.. got it?!");
 
-export default UserService;
+export default UserService; 
