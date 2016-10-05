@@ -1,0 +1,84 @@
+<div class="container">
+            <form class="form-horizontal" role="form" ng-submit="registerCtrl.register()">
+                <h2>Register</h2>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">First Name</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                                <div class="form-group">
+                    <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" id="lasName" placeholder="Last Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number" class="col-sm-3 control-label">Phone</label>
+                    <div class="col-sm-9">
+                        <input type="phone" id="phone" placeholder="Phone" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="birthDate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Dealership</label>
+                    <div class="col-sm-9">
+                        <select id="dealership" class="form-control">
+                            <option>Location 1</option>
+                            <option>Location 2</option>
+                            <option>Location 3</option>
+                            <option>Location 4</option>
+                            <option>Location 5</option>
+                            <option>Location 6</option>
+                            <option>Location 7</option>
+                            <option>Location 8</option>
+                        </select>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Role</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" value="Maintenance">Maintenance
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" value="Dealership">Dealership
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="uncknownRadio" value="Admin">Administration
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
