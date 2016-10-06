@@ -15,6 +15,13 @@ class UserService {
         this.auth = $firebaseAuth(this.ref);
     }
 
+    new() {
+        return {
+            email: "",
+            password: ""
+        }
+    }
+
     create(email, password) {
         return new this._$q((resolve, reject) => {
             this.auth.$createUserWithEmailAndPassword(email, password)
@@ -32,10 +39,10 @@ class UserService {
         });
     }
 
-    isLoggedIn() {
-        console.log("Is Logged In");
-        return this.auth.$requireAuth();
-    }
+    // isLoggedIn() {
+    //     console.log("Is Logged In");
+    //     return this.auth.$requireAuth();
+    // }
 }
 
 console.log("this is service JS");
