@@ -9,7 +9,7 @@ class RegisterController {
         this._UserService
         .create(this.newUser.email, this.newUser.password, this.newUser.displayName)
         .then((response) => {
-            console.log("promise");
+            this._$state.go("profile");
         })
         .catch((error) => {
             console.error(error);
