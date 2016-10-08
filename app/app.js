@@ -17,5 +17,7 @@ function config($urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
 }
 
+App.config(config);
+
 console.log("this is app JS");
 

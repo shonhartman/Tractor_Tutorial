@@ -1,13 +1,15 @@
 import angular from 'angular';
 
 import config from './config';
-import loginController from './controllers/login';
+import registerController from './controllers/register';
+import profileController from './controllers/profile';
 import service from './service';
 
 let user = angular.module('app.user', []);
 
 user.config(config);
-user.controller('LoginController', loginController);
+user.controller('ProfileController', profileController);
+user.controller('RegisterController', registerController);
 user.service('UserService', service);
 
 console.log("index JS");
