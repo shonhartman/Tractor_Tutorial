@@ -1,0 +1,24 @@
+@import "mixins/border-radius-mixins";
+@import "mixins/panel-mixins";
+@import "modules/panels";
+
+.page-profile {
+    margin: -15px 0 0;
+
+    .profile-header {
+        position: relative;
+        top: 0;
+        margin: 0 -15px 15px;
+        // padding: 0px 30px 90px;
+        padding: 0px 30px 30px;
+        // background: url('../images/background/3.jpg') no-repeat center center fixed;
+        background: #E0D7C8;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    img.media-object {
+        border-radius: $border-radius-base;
+    }
+}

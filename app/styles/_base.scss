@@ -1,2 +1,40 @@
-#color-test {
-  color: indigo; }
+body {
+    background: $main_container_bg;
+    // background: teal;
+}
+
+// fullscreen, hide header and sidebar
+.body-wide {
+
+    #header,
+    #nav-container {
+        display: none;
+    }
+
+    > .main-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #content {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    // hide intro
+    .introjs-overlay,
+    .introjs-helperLayer {
+        display: none;
+    }
+
+    .app-footer {
+        display: none;
+    }
+}
