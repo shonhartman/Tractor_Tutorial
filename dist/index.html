@@ -16,21 +16,9 @@
   </head>
   <body>
 
-      <header data-ng-include=" 'modules/user/views/header.html' "
-                 id="header"
-                 class="header-container "
-                 data-ng-class="{ 'header-fixed': admin.fixedHeader,
-                                  'bg-white': ['11','12','13','14','15','16','21'].indexOf(admin.skin) >= 0,
-                                  'bg-dark': admin.skin === '31',
-                                  'bg-primary': ['22','32'].indexOf(admin.skin) >= 0,
-                                  'bg-success': ['23','33'].indexOf(admin.skin) >= 0,
-                                  'bg-info-alt': ['24','34'].indexOf(admin.skin) >= 0,
-                                  'bg-warning': ['25','35'].indexOf(admin.skin) >= 0,
-                                  'bg-danger': ['26','36'].indexOf(admin.skin) >= 0
-                 }"></header>
-
     <div ui-view></div>
     <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
     <script src="js/app.js" charset="utf-8"></script>
+    
   </body>
 </html>
